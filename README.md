@@ -3,7 +3,7 @@ ecAssemble is a tool to generate long read assemblies of extra-chromosomal DNA, 
 
 ## Installation 
 There are several dependencies for that can be installed using conda 
-- flye assembler 
+- flye <https://github.com/fenderglass/Flye> 
 - bedtools 
 - minimap2 (required for flye)
 
@@ -38,12 +38,14 @@ conda activate ecAssemble
 ## optional : CVLR can be run to generate a fastq with hypomethylated reads as input into flye.
 ```
 
-## Check if fastqs generated are identical
-
+## Check if fastqs generated and assembly output are identical
 
 ```
 diff test.fq output/test.fq
+
+diff test/assembly.fasta  output/flye/assembly.fasta
 ```
+
 
 ## Post processing
 Annotation of the sequences in the assembly can be done using blast as performed in the manuscript, to identify genes and genomic regions in the assembly. Annotation from the Epigenome Road map can be used as well. 
