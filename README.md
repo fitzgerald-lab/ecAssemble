@@ -7,7 +7,7 @@ There are several dependencies for that can be installed using conda
 - bedtools 
 - minimap2 (required for flye)
 
-Optional (for CVLR) 
+Optional (for CVLR <https://github.com/EmanueleRaineri/cvlr> ) 
 - matplotlib 
 
 ```
