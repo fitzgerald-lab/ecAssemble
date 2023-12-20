@@ -36,6 +36,7 @@ conda activate ecAssemble
 ./scripts/run_flye.sh <test.fq> <test> ## output folder
 
 ## optional : CVLR can be run to generate a fastq with hypomethylated reads as input into flye.
+./scripts/run_cvlr.sh <mod_bam> <sample_name> <region>
 ```
 
 ## Check if fastqs generated and assembly output are identical
