@@ -3,9 +3,6 @@
 # Define variables
 threads=8
 
-source /home/ng02/miniconda3/etc/profile.d/conda.sh
-conda activate flyeEnv
-
 fastq=$1
 out_dir=$2
 
