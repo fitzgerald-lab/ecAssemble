@@ -12,7 +12,11 @@ Optional (for CVLR)
 
 ```
 ## install dependencies using conda 
-conda env update --file environment.yml 
+conda env update --file environment.yml
+
+## install matplotlib for CVLR
+pip install matplotlib
+
 ```
 
 ## Test data 
