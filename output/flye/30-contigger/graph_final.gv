@@ -1,0 +1,34 @@
+digraph {
+nodesep = 0.5;
+node [shape = circle, label = "", height = 0.3];
+"0" [style = "filled", fillcolor = "grey"];
+"1" [style = "filled", fillcolor = "grey"];
+"2" [style = "filled", fillcolor = "grey"];
+"3" [style = "filled", fillcolor = "grey"];
+"4" [style = "filled", fillcolor = "grey"];
+"5" [style = "filled", fillcolor = "grey"];
+"6" [style = "filled", fillcolor = "grey"];
+"7" [style = "filled", fillcolor = "grey"];
+"8" -> "9" [label = "id 1\l64k 6x", color = "black"] ;
+"10" -> "11" [label = "id -1\l64k 6x", color = "black"] ;
+"8" -> "9" [label = "id 2\l64k 45x", color = "black"] ;
+"10" -> "11" [label = "id -2\l64k 45x", color = "black"] ;
+"9" -> "12" [label = "id 3\l26k 43x", color = "cadetblue1" , penwidth = 3] ;
+"13" -> "10" [label = "id -3\l26k 43x", color = "cadetblue1" , penwidth = 3] ;
+"12" -> "14" [label = "id 4\l18k 1x", color = "cadetblue1" , penwidth = 3] ;
+"15" -> "13" [label = "id -4\l18k 1x", color = "cadetblue1" , penwidth = 3] ;
+"12" -> "14" [label = "id 5\l19k 42x", color = "cadetblue1" , penwidth = 3] ;
+"15" -> "13" [label = "id -5\l19k 42x", color = "cadetblue1" , penwidth = 3] ;
+"14" -> "16" [label = "id 6\l16k 48x", color = "cadetblue1" , penwidth = 3] ;
+"17" -> "15" [label = "id -6\l16k 48x", color = "cadetblue1" , penwidth = 3] ;
+"16" -> "18" [label = "id 7\l18k 1x", color = "cadetblue1" , penwidth = 3] ;
+"19" -> "17" [label = "id -7\l18k 1x", color = "cadetblue1" , penwidth = 3] ;
+"16" -> "18" [label = "id 8\l18k 38x", color = "cadetblue1" , penwidth = 3] ;
+"19" -> "17" [label = "id -8\l18k 38x", color = "cadetblue1" , penwidth = 3] ;
+"18" -> "8" [label = "id 9\l528k 42x", color = "black"] ;
+"11" -> "19" [label = "id -9\l528k 42x", color = "black"] ;
+"5" -> "2" [label = "id 10\l29k 7x", color = "black"] ;
+"7" -> "1" [label = "id -10\l29k 7x", color = "black"] ;
+"4" -> "0" [label = "id 11\l66k 4x", color = "black"] ;
+"6" -> "3" [label = "id -11\l66k 4x", color = "black"] ;
+}

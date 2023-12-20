@@ -1,0 +1,38 @@
+digraph {
+nodesep = 0.5;
+node [shape = circle, label = "", height = 0.3];
+"0" [style = "filled", fillcolor = "grey"];
+"1" [style = "filled", fillcolor = "grey"];
+"2" [style = "filled", fillcolor = "grey"];
+"3" [style = "filled", fillcolor = "grey"];
+"4" [style = "filled", fillcolor = "grey"];
+"5" [style = "filled", fillcolor = "grey"];
+"6" -> "7" [label = "id 2\l64k 6x", color = "black"] ;
+"8" -> "9" [label = "id -2\l64k 6x", color = "black"] ;
+"6" -> "7" [label = "id 3\l64k 45x", color = "black"] ;
+"8" -> "9" [label = "id -3\l64k 45x", color = "black"] ;
+"7" -> "10" [label = "id 5\l26k 43x", color = "red" , penwidth = 3] ;
+"11" -> "8" [label = "id -5\l26k 43x", color = "red" , penwidth = 3] ;
+"10" -> "12" [label = "id 6\l18k 1x", color = "red" , penwidth = 3] ;
+"13" -> "11" [label = "id -6\l18k 1x", color = "red" , penwidth = 3] ;
+"10" -> "12" [label = "id 7\l19k 42x", color = "red" , penwidth = 3] ;
+"13" -> "11" [label = "id -7\l19k 42x", color = "red" , penwidth = 3] ;
+"12" -> "14" [label = "id 8\l15k 49x", color = "red" , penwidth = 3] ;
+"15" -> "13" [label = "id -8\l15k 49x", color = "red" , penwidth = 3] ;
+"14" -> "16" [label = "id 9\l1.2k 48x", color = "red" , penwidth = 3] ;
+"17" -> "15" [label = "id -9\l1.2k 48x", color = "red" , penwidth = 3] ;
+"16" -> "18" [label = "id 11\l18k 1x", color = "red" , penwidth = 3] ;
+"19" -> "17" [label = "id -11\l18k 1x", color = "red" , penwidth = 3] ;
+"16" -> "20" [label = "id 12\l13k 41x", color = "red" , penwidth = 3] ;
+"21" -> "17" [label = "id -12\l13k 41x", color = "red" , penwidth = 3] ;
+"18" -> "22" [label = "id 13\l10k 34x", color = "red" , penwidth = 3] ;
+"23" -> "19" [label = "id -13\l10k 34x", color = "red" , penwidth = 3] ;
+"19" -> "21" [label = "id 14\l4.9k 32x", color = "red" , penwidth = 3] ;
+"20" -> "18" [label = "id -14\l4.9k 32x", color = "red" , penwidth = 3] ;
+"22" -> "3" [label = "id 15\l29k 7x", color = "black"] ;
+"4" -> "23" [label = "id -15\l29k 7x", color = "black"] ;
+"2" -> "0" [label = "id 17\l66k 4x", color = "black"] ;
+"5" -> "1" [label = "id -17\l66k 4x", color = "black"] ;
+"22" -> "6" [label = "id 18\l518k 43x", color = "red" , penwidth = 3] ;
+"9" -> "23" [label = "id -18\l518k 43x", color = "red" , penwidth = 3] ;
+}
