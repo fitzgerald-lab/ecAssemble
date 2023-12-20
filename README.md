@@ -1,5 +1,5 @@
 # ecAssemble
-eAssemble is a tool to generate long read assemblies of extra-chromosomal DNA by providing a bam file with and list of genomic regions or bins amplified.
+ecAssemble is a tool to generate long read assemblies of extra-chromosomal DNA, by providing a bam file with and list of genomic regions or bins amplified.
 
 ## Installation 
 There are several dependencies for that can be installed using conda 
@@ -16,7 +16,7 @@ conda env update --file environment.yml
 ```
 
 ## Test data 
-Currently ecAssemble can be run using a set of regions and a mini-bam in the data folder. It is designed to to take a mod bam ( with Mm and Ml tags) but currently the mod bam lacks methylation tags. 
+Currently ecAssemble can be run using a set of regions and a mini-bam in the data folder. It is designed to to take a mod bam ( with Mm and Ml tags) but currently the test bam file lacks methylation tags. 
 
 ## Test run
 ecAssemble can be run using default parameters with the bam file and a set of genomic regions as input. 
