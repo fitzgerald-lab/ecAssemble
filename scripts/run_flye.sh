@@ -12,4 +12,7 @@ flye --nano-hq $fastq \
 --keep-haplotypes \
 --threads $threads \
 --out-dir $out_dir \
---read-error 0.01
+--read-error 0.01 \
+--deterministic
+
+
