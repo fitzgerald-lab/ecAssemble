@@ -7,6 +7,8 @@ There are several dependencies for that can be installed using conda
 - bedtools 
 - minimap2 (required for flye)
 
+The installation of the packages using conda via the environment file should take < 5 mins.
+
 Optional (for CVLR <https://github.com/EmanueleRaineri/cvlr> ) 
 - matplotlib 
 
@@ -22,8 +24,9 @@ pip install matplotlib
 ## Test data 
 Currently ecAssemble can be run using a set of regions and a mini-bam in the data folder. It is designed to to take a mod bam ( with Mm and Ml tags) but currently the test bam file lacks methylation tags. 
 
+
 ## Test run
-ecAssemble can be run using default parameters with the bam file and a set of genomic regions as input. 
+ecAssemble can be run using default parameters with the bam file and a set of genomic regions as input. ecAssemble has been tested in a Linux environment and MacOS with intel processors. Currently ecAssemble is not compatible with Apple sillicon hardware.
 ```
 ## activate conda environment
 conda activate ecAssemble
