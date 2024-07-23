@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 import os
 import re
 import pysam
@@ -137,9 +137,9 @@ def main(bam, region_list, sample_name, input_bed, interval_size, mod_bam = bam,
         regions = bed_file.readlines()
         window_list = [i.split('\t')[-1].rstrip('\n') for i in regions]
 
+    ## run cvlr if there is a mod bam for read clustering using methylation marks
     #with Pool(threads) as p:
     #    p.starmap(run_cvlr, product([mod_bam], [sample_name], window_list))
-
     #parse_cvlr(sample_name)
     hypo_file  = '%s_hypo-readnames.tsv' % sample_name
     #extract_reads(bam, region_list, sample_name + '_hypo', read_file=hypo_file)
