@@ -4,6 +4,7 @@ import re
 import pysam
 import logging
 import argparse
+import traceback
 import subprocess
 import pandas as pd 
 from itertools import product
@@ -19,27 +20,27 @@ def extract_reads(bam, region_list, sample_name, read_file=False):
         if read_file:
             with open(read_file, 'r') as read_buf:
                 target_reads = [i.rstrip('\n') for i in read_buf.readlines()]
+        
+        with open(output_fastq, "w") as fastq_out:
 
-        for region in region_list.split(','):
-            chrom, start, end = re.split(':|-', region)
-            reads = bam_file.fetch(chrom, int(start), int(end))
+            for region in region_list.split(','):
+                chrom, start, end = re.split(':|-', region)
+                reads = bam_file.fetch(chrom, int(start), int(end))
 
-            with open(output_fastq, "w") as fastq_out:
                 for read in reads:
                     try:
-                        if read_file:
-                            if (read.query_name not in read_names) and (read.query_name in target_reads):
-                                fastq_out.write(
-                                    f"@{read.query_name}\n{read.seq}\n+\n{''.join(map(lambda x: chr(x+33), read.query_qualities))}\n")
-                                read_names.append(read.query_name)
-                        else:
-                            if read.query_name not in read_names:
-                                fastq_out.write(
-                                    f"@{read.query_name}\n{read.seq}\n+\n{''.join(map(lambda x: chr(x+33), read.query_qualities))}\n")
-                                read_names.append(read.query_name)
-                    except Exception as e:
-                        logging.error('ERROR : ' + str(e))
-
+                        if read.query_qualities != None:
+                            fastq = f"@{read.query_name}\n{read.seq}\n+\n{''.join(map(lambda x: chr(x+33), read.query_qualities))}\n"
+                            if read_file:
+                                if (read.query_name not in read_names) and (read.query_name in target_reads):
+                                    fastq_out.write(fastq)
+                                    read_names.append(read.query_name)
+                            else:
+                                if read.query_name not in read_names:
+                                    fastq_out.write(fastq)
+                                    read_names.append(read.query_name)
+                    except Exception:
+                        print(traceback.format_exc())
 
 def generate_windows(region_bed, interval_size):
     '''Generate a BED file of genome windows for parallel CVLR'''
